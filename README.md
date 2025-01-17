@@ -8,7 +8,6 @@ This project is a Next.js/React web application designed to improve the operatio
 - [Tech Stack](#tech-stack)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
-- [Contribution Guidelines](#contribution-guidelines)
 
 ## Project Overview
 RadiCare Ventures faces operational challenges in managing service requests. The current process relies heavily on a single point of contact, creating a bottleneck that impacts efficiency. This project aims to:
