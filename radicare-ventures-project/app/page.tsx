@@ -1,5 +1,5 @@
 import Navbar from './components/navbar';
-import QuestionBox from './components/questionBox';
+import QuestionBox from './components/serviceRequestForm';
 
 export default function Home() {
   const message = `RadiCare Ventures is innovating a new way of addressing community 

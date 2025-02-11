@@ -16,12 +16,11 @@ const Navbar: React.FC = () => {
                 </li>
 
                 <li>
-                    <button className="rounded-lg py-2.5 px-5 text-customGreen">
-                        {/* <button className="rounded-lg py-2.5 px-5 text-black hover:bg-lightGreen hover:text-customGreen"> */}
+                    <button className="rounded-lg py-2.5 px-5 text-black hover:bg-lightGreen hover:text-customGreen">
                         <a href="/services" className="no-underline">
                             <div className="flex flex-row items-center gap-3">
                                 Request a Service
-                                {/* <GoTriangleDown /> */}
+                                <GoTriangleDown />
                             </div>
                         </a>
                     </button>
