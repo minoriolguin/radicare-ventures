@@ -11,13 +11,13 @@ const Navbar: React.FC = () => {
 
                 <li>
                     <button className="rounded-lg py-2.5 px-5 text-black hover:bg-lightGreen hover:text-customGreen">
-                        <a href="/home" className="no-underline">Home</a>
+                        <a href="/" className="no-underline">Home</a>
                     </button>
                 </li>
 
                 <li>
                     <button className="rounded-lg py-2.5 px-5 text-black hover:bg-lightGreen hover:text-customGreen">
-                        <a href="/services" className="no-underline">
+                        <a href="/" className="no-underline">
                             <div className="flex flex-row items-center gap-3">
                                 Request a Service
                                 <GoTriangleDown />
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 
                 <li>
                     <button className="rounded-lg py-2.5 px-5 text-black hover:bg-lightGreen hover:text-customGreen">
-                        <a href="/our_work" className="no-underline">
+                        <a href="/" className="no-underline">
                             <div className="flex flex-row items-center gap-3">
                                 Our Work
                                 <GoTriangleDown />
@@ -39,12 +39,12 @@ const Navbar: React.FC = () => {
 
                 <li>
                     <button className="rounded-lg py-2.5 px-5 text-black hover:bg-lightGreen hover:text-customGreen">
-                        <a href="/about" className="no-underline">About</a>
+                        <a href="/" className="no-underline">About</a>
                     </button>
                 </li>
                 <li>
                     <button className="bg-customGreen rounded-full p-2.5 px-5 hover:bg-darkGreen">
-                        <a href="/contact" className="text-white text-lg no-underline">Contact</a>
+                        <a href="/" className="text-white text-lg no-underline">Contact</a>
                     </button>
                 </li>
             </ul>

@@ -1,11 +1,10 @@
-import Navbar from './components/navbar';
-import QuestionBox from './components/serviceRequestForm';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import QuestionBox from './components/ServiceRequestForm';
+import Link from 'next/link';
 
-export default function Home() {
-  const message = `RadiCare Ventures is innovating a new way of addressing community 
-                    safety and cleanliness. We are your partner in revitalising traumatised,  
-                    dark spaces. Our staff specialises in the clean up of urban litter, vandalism, 
-                    and addressing social disorder in a compassionate and helpful manner.`;
+export default function Home( ) {
+
 
   return (
     <div>
@@ -18,7 +17,7 @@ export default function Home() {
 
         <main className="pt-10 text-lg flex flex-col gap-3 sm:items-start span">
           <div className='ml-4 text-greyText'>
-            <h1 className='text-4xl'>Request a service</h1>
+            <h1 className='text-4xl'><Link href="/">Request a service</Link></h1>
             <p>You can request a service by completing the form below.</p>
           </div>
 
@@ -27,28 +26,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-
-
-      <footer className="bg-darkGreen row-start-3 flex flex-col items-center justify-center text-white p-8">
-        <div className="grid grid-cols-3 items-center justify-items-center gap-6 w-full max-w-screen-xl">
-          {/* Column 1 */}
-          <div>
-            <img src="/license_no.png" />
-          </div>
-
-          {/* Column 2 */}
-          <div>
-            {message}
-          </div>
-
-          {/* Column 3 */}
-          <div>
-            <img src="/buy_social.png" />
-
-          </div>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
 
   );
