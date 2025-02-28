@@ -18,7 +18,7 @@ export async function POST(req: Request) {
                 return prisma.answer.create({
                     data: {
                         questionId: Number(questionId),
-                        answer: Array.isArray(answer) ? answer.join(", ") : answer, // Handle checkboxes
+                        answer: Array.isArray(answer) ? answer.join(", ") : String(answer), // ✅ Fix here
                     },
                 });
             })
