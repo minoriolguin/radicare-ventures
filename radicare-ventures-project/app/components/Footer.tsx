@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
     const message = `RadiCare Ventures is innovating a new way of addressing community 
     safety and cleanliness. We are your partner in revitalising traumatised,  
@@ -7,7 +9,7 @@ export default function Footer() {
         <footer className="bg-darkGreen flex flex-row items-center justify-between text-white md:p-4 md:gap-6 w-full">
             {/* Column 1 */}
             <div className='basis-1/4 p-24 md:p-36 flex flex-col'>
-                <img src="/license_no.png" />
+                <Image src="/license_no.png" alt="" />
             </div>
 
             {/* Column 2 */}
@@ -17,7 +19,7 @@ export default function Footer() {
 
             {/* Column 3 */}
             <div className='basis-1/4 p-24 md:p-36 flex flex-col'>
-                <img src="/buy_social.png" />
+                <Image src="/buy_social.png" alt="" />
 
             </div>
 

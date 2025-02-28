@@ -49,7 +49,7 @@ const InputTypes: React.FC<InputProps> = ({ type, answerOptions, answer, onChang
                                 type="checkbox"
                                 value={option}
                                 checked={(answer as string[]).includes(option)}
-                                onChange={(e) => {
+                                onChange={() => {
                                     const newAnswers = (answer as string[]).includes(option)
                                         ? (answer as string[]).filter((ans) => ans !== option)
                                         : [...(answer as string[]), option];
