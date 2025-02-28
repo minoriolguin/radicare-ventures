@@ -6,23 +6,28 @@ const prisma = new PrismaClient();
 export async function POST(req: Request) {
     try {
         const data = await req.json();
+        const answers = data.answers; // Get all answers
 
-        if (!data || !data.questionId || !data.answer) {
-            return NextResponse.json({ error: "Invalid data" }, { status: 400 });
+        if (!answers || typeof answers !== "object") {
+            return NextResponse.json({ error: "Invalid data format" }, { status: 400 });
         }
 
-        // Save to DB
-        const savedAnswer = await prisma.answer.create({
-            data: {
-                questionId: data.questionId,
-                answer: data.answer,
-            },
-        });
+        // Save each answer to the database
+        const savedAnswers = await Promise.all(
+            Object.entries(answers).map(async ([questionId, answer]) => {
+                return prisma.answer.create({
+                    data: {
+                        questionId: Number(questionId),
+                        answer: Array.isArray(answer) ? answer.join(", ") : answer, // Handle checkboxes
+                    },
+                });
+            })
+        );
 
-        return NextResponse.json({ message: "Answer saved!", savedAnswer }, { status: 200 });
+        return NextResponse.json({ message: "Answers saved!", savedAnswers }, { status: 200 });
 
     } catch (error) {
-        console.error("Error saving answer:", error);
+        console.error("Error saving answers:", error);
         return NextResponse.json({ error: "Server error" }, { status: 500 });
     }
 }

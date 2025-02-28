@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import InputTypes from "./InputTypes";
+import InputTypes from "./inputTypes";
 
 type QuestionProps = {
     id: number;

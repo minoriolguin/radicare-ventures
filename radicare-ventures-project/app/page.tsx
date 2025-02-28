@@ -1,6 +1,6 @@
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import QuestionBox from './components/ServiceRequestForm';
+import Footer from './components/footer';
+import Navbar from './components/navbar';
+import QuestionBox from './components/serviceRequestForm';
 import Link from 'next/link';
 
 export default function Home( ) {

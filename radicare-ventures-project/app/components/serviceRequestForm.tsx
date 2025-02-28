@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Question from "./Question";
+import Question from "./question";
 
 const questions = [
     { id: 1, question: "Are you currently a client?", type: "multiple_choice", answer_options: ["Yes", "No"] },
@@ -26,26 +26,27 @@ export default function ServiceRequestForm() {
     };
 
     // Simulate saving to a database (replace with actual API call)
-    const saveAnswersToDB = async (questionId: number, answer: string) => {
+    const saveAnswersToDB = async () => {
         try {
             const response = await fetch("/api/save-answers", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ questionId, answer }),
+                body: JSON.stringify({ answers }),
             });
-
+    
             const result = await response.json();
-
+    
             if (response.ok) {
-                console.log("Answer saved:", result);
+                console.log("All answers saved:", result);
                 setSubmitted(true);
             } else {
-                console.error(result.message);
+                console.error("Failed to save answers:", result.message);
             }
         } catch (error) {
             console.error("Error saving answers:", error);
         }
     };
+    
 
     return (
         <div className="min-h-screen p-12 border shadow-lg rounded-md">
