@@ -25,7 +25,6 @@ export default function ServiceRequestForm() {
         }, 500);
     };
 
-    // Simulate saving to a database (replace with actual API call)
     const saveAnswersToDB = async () => {
         try {
             const response = await fetch("/api/save-answers", {
