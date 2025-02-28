@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Question from "./Question";
+import Question from "./question";
 
 const questions = [
     { id: 1, question: "Are you currently a client?", type: "multiple_choice", answer_options: ["Yes", "No"] },
