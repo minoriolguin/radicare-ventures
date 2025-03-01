@@ -48,7 +48,7 @@ export default function ServiceRequestForm() {
     
 
     return (
-        <div className="min-h-screen p-12 border shadow-lg rounded-md">
+        <div className="w-full min-h-screen p-12 border shadow-lg rounded-md">
             {/* Progress Bar */}
             <div className="relative w-full h-2 bg-gray-300 rounded">
                 <div className="h-2 bg-darkGreen rounded transition-all duration-200" style={{ width: `${progressPercentage}%` }}></div>
@@ -80,7 +80,7 @@ export default function ServiceRequestForm() {
                 </button>
             )}
 
-            {submitted && <p className="text-green-500 mt-4">✅ Your answers have been saved!</p>}
+            {submitted && <p className="text-green-500 mt-4">Your response has been saved!</p>}
         </div>
     );
 }
