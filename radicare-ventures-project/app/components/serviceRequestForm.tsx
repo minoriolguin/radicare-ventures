@@ -26,26 +26,27 @@ export default function ServiceRequestForm() {
         }, 500);
     };
 
-    const saveAnswersToDB = async () => {
-        try {
-            const response = await fetch("/api/save-answers", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ answers }),
-            });
+    // API 
+    // const saveAnswersToDB = async () => {
+    //     try {
+    //         const response = await fetch("/api/save-answers", {
+    //             method: "POST",
+    //             headers: { "Content-Type": "application/json" },
+    //             body: JSON.stringify({ answers }),
+    //         });
 
-            const result = await response.json();
+    //         const result = await response.json();
 
-            if (response.ok) {
-                console.log("All answers saved:", result);
-                setSubmitted(true); 
-            } else {
-                console.error("Failed to save answers:", result.message);
-            }
-        } catch (error) {
-            console.error("Error saving answers:", error);
-        }
-    };
+    //         if (response.ok) {
+    //             console.log("All answers saved:", result);
+    //             setSubmitted(true); 
+    //         } else {
+    //             console.error("Failed to save answers:", result.message);
+    //         }
+    //     } catch (error) {
+    //         console.error("Error saving answers:", error);
+    //     }
+    // };
 
     return (
         <div className="w-full min-h-screen p-12 border shadow-lg rounded-md">
