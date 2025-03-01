@@ -6,7 +6,7 @@ export default function Footer() {
     dark spaces. Our staff specialises in the clean up of urban litter, vandalism, 
     and addressing social disorder in a compassionate and helpful manner.`;
     return (
-        <footer className="bg-darkGreen max-w-screen flex flex-row items-center justify-between text-white w-full py-4">
+        <footer className="bg-darkGreen max-w-screen flex flex-row items-center justify-between text-white w-full py-8">
             
             {/* Column 1 */}
             <div className='basis-1/4 flex flex-col'>
